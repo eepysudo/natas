@@ -1,0 +1,5 @@
+- natas1 is similar to natas 0, except this time it says rightclicking is blocked
+- ![](https://remnote-user-data.s3.amazonaws.com/VOcAcpEftw0GzttAVr1FujxQd-B_Vpncf5mNqDkG1rPwZBR0a46QSS6RecuE2BYEHgysW8lxb5ziNysWak3tq_u7Znw51gAP5Xf1OHT3OynMPlZEhk8DrPvK6I5QTL7_.png)
+- i attempted to right-click anyway, and it seemed to work just fine, and i could use the inspect tool on the page. however, i didn't use this to begin with in natas0, so i can solve it in the same way, by pressing `ctrl + u` 
+- ![](https://remnote-user-data.s3.amazonaws.com/K6IHNeDgHBOGw0KXyVOzOo1w1MnTV5rNQIa4Mqw5PJf5AIRvbN90-SurDaZ0ez_bDu4xlRJCKH_o3RwAJI8Yk-uY7Rrv8MwaEB6v0Bj3aFDrBrNlPT1HXpSL5__oYvrW.png)
+- this reveals the password for natas2

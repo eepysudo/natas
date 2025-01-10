@@ -1,0 +1,13 @@
+- natas4 starts off a little differently to the previous levels
+- ![](https://remnote-user-data.s3.amazonaws.com/ALtsDzP3CfymCZdaJds8pN0OJbxe3qCDbU0J11wIUp-1lsv_wlSSvbx4rCJqSQL0Wq10FCFVh1QG2qXsVhTEGGHmKYDgfejpmh3ookG_97CB3GJvnoAlnoP-4u-1op5u.png)
+- it says we are visiting from `""` but need to be visiting from  `"http://natas5.natas.labs.overthewire.org/"` in order to be authorized. the way the server knows where the user had come from, is usually the `referer` header in a HTTP packet. since you can send whatever HTTP packets you like to the server, i will try changing the `referer` header to the url which it is asking me to come from. i could do this using the built-in browser debug tools, but i'm going to use `Burp Suite`, since it makes things more clear and easy to do.
+- ![](https://remnote-user-data.s3.amazonaws.com/vIwiKG6qJQkJfYL09eHrYrbl5wGdY1b2v3qVX7rZEtBY_DtSwUx-4nIZpoSexMvxG1XtZNUGn0Sj1aNddeZBtI7zhZ3whFCM0wqtEIPzI7Q-2N89Q9ZZOB8EIs7_ymWo.png)
+- i opened the page in Burp Suite's browser, as it already had the correct proxy settings, and i turned intercept on, to catch the HTTP GET request before it is sent to the server. i can now view the packet about to be sent.
+- ![](https://remnote-user-data.s3.amazonaws.com/9aPQnJuFhPiP07Aj-g2Aih13Cp4CUggfGcELK0hAf6tSESszxR7WdANFBArOTCZMnrfS1P_ubOFPZe9j2XPfw-n7BksJWS0RXGR0vQEqnGQCGzP9qGuOMBuFAL4Vof0s.png)
+- the packet doesn't contain a `referer` header here, so i will try using the "Refresh page" button on the site, and take a look at the packet send when that is clicked.
+- ![](https://remnote-user-data.s3.amazonaws.com/KnKxzXIVoAeFVk-5M-9FbZbNsG-Ixlz96I61WDBhXjHoYGWwzF6DXHMFMnxJfXJuJ_PGMfzlsxhSyzb3scZ-8qBnBjmsLssGiWm1bXDcFzTj22WpeaFxNorFFKsSYSOi.png)
+- this time, a `referer` header is there, and it's set to the url of natas4's index, but to be authorized, the page says i need to be coming from the natas5 url, so i will replace the url with the one needed.
+- ![](https://remnote-user-data.s3.amazonaws.com/dRVTzj7fZ5-Cv2WVhL-pHp90LfvTcil6w7QECAbkHoUIYpd6uw-yw6T4wNqgY4HJ8uMPlifwp0VM41rPHgYuVsudWicJZswmE_CSMd8gNS9xlVYZM4RwMCNsaVtiuG5n.png)
+- i then forward this packet, and take a look at the page.
+- ![](https://remnote-user-data.s3.amazonaws.com/7s1QQjI8F9aexHt3-1oP66g4gBUOghm721eEdeToRNy1U-ZXs_r7BFA3cDWS4mrvcyUU5XPY_RCYGQabHYo0iMYsqNotjF0rBjV6Gn4A2lecsTnH_w9p5COkwWPG2vUz.png)
+- it now shows that access has been granted, and reveals the password for natas5

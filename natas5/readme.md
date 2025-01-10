@@ -1,0 +1,11 @@
+- natas5 begins by telling me i am not logged in
+- ![](https://remnote-user-data.s3.amazonaws.com/fY8i2lSVo3BYqLZrz2yiRazgDUszeKOWPuHwziYzOQoRYtp6WAB5yyhoFv5_3GsjEv9arMpcteHBAPeL1c7eDXGqhwBP6UwAa6aMyIvAbCzAuYrYa3OfDET6H7ai1ovH.png)
+- for this to be shown, i suspect some sort of variable is being grabbed from somewhere to determine if the user is "logged in". i checked the url for parameters
+- ![](https://remnote-user-data.s3.amazonaws.com/_GmmGmlP-bLuBZiBqLKvIanVKLUsc7BLXoHyUSLcxf0bEq-kGXsWex4z5LoMJWqxsYq89YE2hThZJn3EzW1w59UWE9V2THa8E26-5ExLeI23zDK9PND-lIympE2nCuwE.png)
+- there are no visible parameters being set here that might tell if the user is logged in or not. my next 2 thoughts are that it's being stored in a cookie, or that it's being sent to the server through a http packet. i'll check the cookie first to save me opening up burp suite again.
+- ![](https://remnote-user-data.s3.amazonaws.com/HFxl3kW_N8L8SZROwWAxthjAQiOg4Guwp7dtnDn8T3NYM0MsjPEAkwOwvl9WBv6q5xQdtDdUOiViJlPpB2csA_GS2BFeOGEuOrmBRdW2Ci-B8JC7XXfWXfIZsUU4hLHv.png)
+- there is a cookie called `loggedin`, which i assume is what's being used. its value is set to `0`, so i will try changing it to `1` 
+- ![](https://remnote-user-data.s3.amazonaws.com/HfxYxoEuljENgfDTEpBogNXxCtpZDOqjgmXLFQRHMpTkea8VKPTvBP_02NRU5XwDdIYE2-7KxqkWj0TZ6ql2fQMyAuwvV2dNOe7HBsa8nAVEAYjgfwz9dcOFPuDywim_.png)
+- i will now refresh the page to see if anything changes
+- ![](https://remnote-user-data.s3.amazonaws.com/3Aa3rprf2y38fWk12p4ivrecqLLD94JzLCpYQrugaX_4beQ7MBWR8trwGV0wlJYUYgrMAGf0cFOMq9CNdGHOoKeJ6rU9Tdhvyw-GchmZHihZboM9C2RkY-K2i-2DN6So.png)
+- refreshing the page "logs in" the user, and gives the password for natas6

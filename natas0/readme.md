@@ -1,0 +1,5 @@
+- first looking at natas0, there's not much on the page that catches your attention. just some text saying "You can find the password for the next level on this page."
+- ![](https://remnote-user-data.s3.amazonaws.com/s65-oOzN19Re5lJ7WuFk6jLygaL5_n0emw0mIrbGMxIPHani0Zxu4BI9dDUK3DXAD2c_6MnWqsTfPRioBG1LRCXuLVkOS0XPu4qiMimE0iCh59g8F3TYGvb7RsgXh9IA.png)
+- since there's not much to interact with, i took a look at the html source code using `ctrl + u` 
+- ![](https://remnote-user-data.s3.amazonaws.com/AYjrdkzJqea0TCFODOpZJjZhP8dcwzhj0Cqxa-R9PbaQFtEnbHjdWJa-cFtkL4aNUZNvd77qhKnck4pfOouALMAvbP83QDnCV9iZcF_Mc3NhafRj_dfxQ_JlHcaz4vI8.png)
+- doing this revealed 2 comments, one of which contains the password for natas1

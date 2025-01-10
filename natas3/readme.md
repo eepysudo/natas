@@ -1,0 +1,11 @@
+- natas3 looks very familiar by now. i'll once again use `ctrl + u` to view the html source
+- ![](https://remnote-user-data.s3.amazonaws.com/Z5iDN9vXiJaugNMrW2VgLxW408PxIhfsarH1tGLsOsqSVyM0UHQMP_z7aDJNERj8U715--NKLeVn0Ol0M75FPmXlLpFu8yONPPwBp_HK9Tk5jUZDBZPcdAZhgT0-NOoK.png)
+- doing this, the only thing that stands out to me is this comment
+- ![](https://remnote-user-data.s3.amazonaws.com/wXWlsdQdJugVoSzNbYkFPyQCJfu2HUn77haiRJkUAYMycwm7cBucw9F2E2oPEmN9breV5CdB178y8gkPkfxhx3VnrMIfsh9txUL3Nli8XRBp3b1trUTVDFEndYOSHOeo.png)
+- this looks like a hint to where i might find the flag. the first thing i thought of when reading this was the `robots.txt` file. this file contains information for crawler bots, to tell them which pages of a site they should publicly index in a search engine, and which ones they shouldn't. sometimes, hidden pages are simply listed here, to prevent google from indexing them. so i will add `/robots.txt` to the end of the url 
+- ![](https://remnote-user-data.s3.amazonaws.com/8vhAUn9nA8187gTdyi2Caz-311uF-q3vJmiQcxppMuOSINq_UTAuYC4hS0TW_6XB21723NKAqYr4f5e38q-VKqyiaDsIOuyEPDSjKHXfuQqieNRgPuEbyHcB3PdVMocg.png)
+- this reveals that `/s3cr3t/` should not be indexed on search engines like google, so let's have a loot at what's there.
+- ![](https://remnote-user-data.s3.amazonaws.com/LNsI7pxxHOYFDs47FgJexelytL5V2jmHOFmLVmCrCFzr8AoJepYL4ULFqkvvxXGmuBt53P5e9v6xadUmdBDPQCtckjLXInfyQ4GZT79S_qRYS4uMXARodqa2xaYBihd3.png)
+- this reveals, like the last level, an open directory, with a file `users.txt` 
+- ![](https://remnote-user-data.s3.amazonaws.com/bSgEFaIA5urfHWI-rnUVFlZjDBMB8YnxDfwqPaB0q14bbWPBGvRXdxFN36Ij4_7oU5G6WBXbki-BHVVgwxEmVOSNN_BbO_lTL8jVm_t3XJOyw-JMHVJOT9Pl_MzEvyCz.png)
+- this file contains the credentials to natas4
