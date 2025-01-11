@@ -1,0 +1,12 @@
+- natas8 begins similar to natas6, with a box to input a secret, and a button to view the source code![](https://remnote-user-data.s3.amazonaws.com/G_pF4h131jiQmOgBIWpcF18vbZBeXWn63iLmN3PSPxk-U7kcvdTm2mXlOGI2lYKkACo-WQnWK3bJ0jIsaHCeMyhaEsquIYb94DLakiej4V4tkyQRUk2GMzyMwdxHMRiL.png)
+- i'll have a look at the source code, as that's very useful information
+- ![](https://remnote-user-data.s3.amazonaws.com/IU8btPh-ig8E0B2ItradpKn29nkERArLSyEjjz_QIBbfXYZdpjnhtkhF47w-Buzs7rSzc3mnjLBXQS96POBA2ITfKEeK0OGenFj_dir058GAJw4lZTGIGYPuWLrcY89R.png)
+- this reveals php code which is checking if the secret you input is equal to the `$encodedSecret` variable, after it is run through the `encodeSecret()` function. this means that i need to find a string, which when encoded using that function, equals the string `"3d3d516343746d4d6d6c315669563362"` . i'll start by breaking down the `encodeSecret` function, and attempt to reverse it.
+- ![](https://remnote-user-data.s3.amazonaws.com/s5T9evjKGOisKRtfAPu41euw0GxGvMQM9r9roLgK3f4rgBeW3fGQ2GYKp9mjJ4Z8nUWWdlNMX4R5MDJXuJswFB8TMSMS7SD7iXtkCAKQnXuZAjbAnzQK8EoCW2TiMVeS.png)
+- this function takes your input, runs `base64_encode()` on it, then runs `strrev()` on that, and finally runs `bin2hex()` on that. so to reverse that, i need to take the output, and first run `hex2bin()` , then run `strrev()`, and finally `base64_decode()` . i will run this on my own machine using php, and using the encoded string as the input
+- ![](https://remnote-user-data.s3.amazonaws.com/FaMjbT-AIzBpTLcclqCS3huCYvwS-scK9ziMBPVQsy_hcOzanKBCfcAWVaisgldJ7BDd0wFYY6NvHCztHprb99J8qxSnNdGMTyUqifKFjZjFfvfeA7Re-oMcRl38c4VE.png)
+- ![](https://remnote-user-data.s3.amazonaws.com/sg7vrRFjiF2ZcaLIaMGyIAP5KxKB4Psqra2yN0csm_fwxjsJhbpFCGot-J8qo3cbv7tw8cNne9Hp6pImW1WL8IwI7OIAK268vAtDUCObTawP6I7FBdd1n19Sf82gb6Ov.png)
+- this outputs a string, which should be the secret which i need to input.
+- ![](https://remnote-user-data.s3.amazonaws.com/BDAwm5Es8lZ6yO_RCpK9hzVvJxXeK97Va0iGoBLV5WXEemlePFjNO62U_yG17_7V_CUNrivFKYEEhyuiPKOTKQatFTExjzFEylX68iN9SDrn69NofQoT4AQ9H-d7M51j.png)
+- ![](https://remnote-user-data.s3.amazonaws.com/cZv4F3LzMWoBoowYghKHJNbVBEpqPo0pwZlb8NifkAlVHX3w8ZC_5LuswpLEtx0i_hjv9_SCCqjxM_yZ8g1WiTUvH2E94BscPZzzwU8IVxT85zwgQHtRBv0kszIpgp46.png)
+- inputting this as the secret grants me access, and tells me the password for natas9

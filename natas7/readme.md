@@ -1,0 +1,13 @@
+- natas7 begins with nothing but a navigation bar
+- ![](https://remnote-user-data.s3.amazonaws.com/cDAyMka9E0hNb8XUzE6cohqt0ascOK9K8OUrDfKCUYKeXkZuVRzWmQq9ZIQWZYK_Ix8nY9vGOCJGqZ2nwP2q8nt0C3KV30tB0cQdJUwoE9RnZzElDrsbfdPSk-Y_qbKp.png)
+- i'll start by clicking on both of these and seeing what happens
+- ![](https://remnote-user-data.s3.amazonaws.com/DYrjrnuVb5C8dpotzpEobIqHiY6GnF60I7-WbZx-nKGzHuVfsnKMrxmUMnRv9TQuDNZg7bNlxE-VpK5fG4XXQDCIzNpcB_GTmsznJ_qIuRxmL4opd0Q92g_93slR41hH.png)
+- ![](https://remnote-user-data.s3.amazonaws.com/1hQWB1vP4dtYtr8rzaebThknQADeQSAk2z0bb0pP02vEFbotNj52AMvNv6vcfIZE-V3erst-277w_HcgFYQA5QGHRyn_9XTW0iCL6hIsfOUjwjpDoY0ifEsYrjVcUU_p.png)
+- all it really does is changes the text underneath, to say which page it's on. however, i also noticed that the url was changing, setting a parameter called `page` to the name of the page. this makes me think that these pages are being included from other files, and added to the main page
+- ![](https://remnote-user-data.s3.amazonaws.com/f5Mat1Bu8S74aTRzbGOx16tTUhqWCdi9wxlI7ilO7Tg6CQqoJ_70pPPxXMSN-JOWsMMiywuccn31FiN72tnUrSbOOE8fAoTKRvzropSG7uOh8r3XDLG3rgKfv-lwnMMN.png)
+- since i don't know much about what i'm looking for, i'll take a look at the html source with `ctrl + u`
+- ![](https://remnote-user-data.s3.amazonaws.com/Qo8v6PMV0r6tyHLtlXoya43Atmw1Rm6XIM8bsVvDpIeTOSwTBeW6PH3hw899RohrbjkuEBXaXTJZ-KuHeC4pcSwl0IBxQTFN1_UwuT608NLiwNQ9ney32vSCaEnj7TkG.png)
+- inside the html, is a comment which says the natas8 password is in `/etc/natas_webpass/natas8`. the index page is most likely not already in the `/etc` directory, as that's not usually where web servers are on a linux machine. this means that i probably won't be able to access it using the url. luckily though, i already said i thought that the navigation bar is including pages from other files, so i'll try to access the password using that. i'll try putting the absolute file path to the password file into the `page` parameter.
+- ![](https://remnote-user-data.s3.amazonaws.com/g6P_HkvinkmMrnDmd2PO17fH099uHWojhpGrVjPd4jESOUA550n1LerlV47RYB8k_9IzVV1AaqMvCa9TfDXShyOUgnTT80Uuwp8Mtl_FHO_IzFkah9GW33f4Y2XouFk9.png)
+- ![](https://remnote-user-data.s3.amazonaws.com/oGcB0smCKRpigFVmNyaJhoSnSTbbIuYe9hmp50Y1wFmL8QSXQyVFpH4xVBjQ-1keMXlIqWt9NxDTHlzvUHrfO0wKURmVE2xkCyiXOperqGAl2S6J528mQ9aYaMtDySg2.png)
+- this successfully includes the password file instead of the home or about page, giving me the password for natas8

@@ -1,0 +1,14 @@
+- natas6 asks me to input a secret
+- ![](https://remnote-user-data.s3.amazonaws.com/NYbjT_GIgUM3N45QDjutjaO3WnDZpugCB5xjj2WUFzhCcgyAORDmq5JlO4oPtZRtt1vSo9Zl7Tdi51fVP-vAz8vtUb6Qb3AZmFkS7uJ6qHKH-Xb3pnaizfnE9FEmyfQ-.png)
+- there is also a "View sourcecode" button, so i'll take a look at that first
+- ![](https://remnote-user-data.s3.amazonaws.com/qhFeAhlLMwn_91T5Rr6rgj0m4rBuwCV36LGQnrYeQh_nF6DfOxHsMI1gjCF5QgsQBTaMXK7VSOmkMcLBXxizyEtwHXJnC8N9c0UNxQLa7-G__LGuW_S8y9B_Hp4vfguc.png)
+- we can see some php code, and seems to be including `includes/secret.inc`, then comparing the value we put into the box with the `$secret` variable. i will try to find what's being stored in that variable, and i think trying to access the included file is a good start, so i will navigate to `/includes/secret.inc` 
+- ![](https://remnote-user-data.s3.amazonaws.com/TD_EurtYT1Y0sOf4r_1Ox8rlONWERefpABfOZOH9CgWxFWS_-VdUGvNp7_WQJBw12nZUy73ciDAP3kFmmxDTosB7JLfdOVxoOzX4kBsB_saRQtd-n5tpWygtQhgAqhgF.png)
+- ![](https://remnote-user-data.s3.amazonaws.com/Mw81IvGQ9gOrvwn819HsGP1sbEjjrBGuoxsbbMlWTZD2j8fm7wB8IrVJEesvqzUkJqaL0smVOSN265PmqaBnaPGZql9oXe4Ih5ZMkqewZbMH42_KuysYMby6I8aQres_.png)
+- loading this page does load something, but there's nothing visible on the page, so i will try viewing the page source using `ctrl + u`
+- ![](https://remnote-user-data.s3.amazonaws.com/PsQ58fJc1aXQ1OkO0-a1TmBGk4PtIOmO8BzT0Jqpnkh49CTAAcS2L3ch4fIACP9seFk4Dcg_ouHq-2ebsWdETam5pzX48imgXE9ZNTycPDWZjY_duBvbiOOQLOizSmju.png)
+- doing this reveals the value which is being stored in the `$secret` variable, i will try inputting this as the secret and pressing submit
+- ![](https://remnote-user-data.s3.amazonaws.com/mhqNAnc-gbMPKOmRZsaW-_52twNSnWJKWi1E8H3NC5yFyf-v1rJ_YTIShMp7_0ETeW0fd3qp_cji_wog4YwxSWJLAGvoZzLMlSNBhGUurJzsNQpwDJjoY0tegiA7U_NJ.png)
+- ![](https://remnote-user-data.s3.amazonaws.com/7o-fyfHRV5Z_8qelw8Q3yqp3Zd77__J1VrgaGDOkBwPawd6F8Yv6WTSTD_g76ulCeQTS8i86zkkQz9ZXBOyPPQ1flxUDJ7tW7Bi4IVzzR25vqk9EBPefjJN3t-qCGZn3.png)
+- this reveals "Access granted" and gives me the password for natas7
+- 
